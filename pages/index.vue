@@ -1,13 +1,10 @@
 <template>
     <div>
-        <h1>hello world</h1>
+        <h1 class="text-red-500">hello world</h1>
     </div>
 </template>
 
 <style>
-    h1 {
-        @apply text-gray-500;
-    }
 </style>
 
 <script>

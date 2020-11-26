@@ -5,8 +5,5 @@
 </template>
 
 <script>
-import styles from '@/static/css/app.module.css'
-export default {
-    
-}
+export default {}
 </script>
