@@ -1,9 +1,23 @@
 <template>
     <div>
-        <Nuxt />
+        <Nav/>
+        <nuxt />
     </div>
 </template>
 
 <script>
-export default {}
+export default {
+    data: {
+        
+    },
+    methods: {
+        
+    },
+    created() {
+        
+    },
+    components: {
+        
+    }
+}
 </script>
