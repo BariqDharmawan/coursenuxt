@@ -29,6 +29,11 @@ export default {
       '~/assets/src/app.scss'
   ],
 
+  transition: {
+    name: 'fade',
+    mode: 'out-in'
+  },
+
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
       '@/plugins/scrollto.js',
