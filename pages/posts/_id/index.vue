@@ -15,11 +15,11 @@ export default {
             post: ''
         }
     },
-    async asyncData(context) {
+    async asyncData({params}) {
         let {data} = await axios.get(
-            `https://jsonplaceholder.typicode.com/posts${context.params.id}`
+            `https://jsonplaceholder.typicode.com/posts/${params.id}`
         )
-        console.log(data)
+        return {post: data}
     },
     head() {
         return {
