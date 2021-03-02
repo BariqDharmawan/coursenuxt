@@ -9,7 +9,7 @@ export default {
     ],
     link: [
         { 
-            rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' 
+            rel: 'icon', type: 'image/x-icon', href: '/icon/favicon.ico' 
         },
         {
             rel: 'stylesheet',
@@ -30,7 +30,9 @@ export default {
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: [
+      '@/plugins/scrollto.js'
+  ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
