@@ -4,11 +4,12 @@
             {{ post.title }}
         </div>
         <div class="card-body">
-            <p class="card-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente libero id nobis molestias praesentium minus, pariatur dolores reprehenderit voluptatibus debitis mollitia obcaecati quo? Neque ipsa non dolorum voluptate unde tempora.
-            </p>
+            {{ post.body }}
         </div>
-        <div class="card-footer">
+        <div class="card-footer card-footer--between">
+            <nuxt-link to="" class="btn btn-link text-white">
+                User id: {{ post.userId }}
+            </nuxt-link>
             <nuxt-link class="btn btn-primary" 
             :to="{name: 'posts-id', params: {id: post.id}}">
                 See post

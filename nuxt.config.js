@@ -31,7 +31,11 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-      '@/plugins/scrollto.js'
+      '@/plugins/scrollto.js',
+      {
+          src: '@/plugins/vueselect.js',
+          ssr: false
+      }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

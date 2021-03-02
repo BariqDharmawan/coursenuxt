@@ -1,8 +1,16 @@
 <template>
     <div>
-        <h1>Indext post page</h1>
-        <hr>
-        <div class="container">
+        <div class="container pt-4">
+            <div class="mb-4">
+                <no-ssr>
+                    <label for="category-post" class="mb-2">
+                        Choose category to see
+                    </label>
+                    <v-select v-model="selected" id="category-post" 
+                    placeholder="Select category"
+                    :options="['foo', 'bar']"></v-select>
+                </no-ssr>
+            </div>
             <div class="row">
                 <div class="col-lg-4" v-for="post in allPosts" :key="post.id">
                     <Card :post="post" />
@@ -19,7 +27,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 import Card from '@/components/Card'
 
 export default {
@@ -28,17 +35,14 @@ export default {
     },
     data() {
         return {
-            posts: ''
+            posts: '',
+            selected: ''
         }
     },
     computed: {
         allPosts() {
             return this.$store.getters.posts
         }
-    },
-    async fetch({store}) {
-        let {data} = await axios.get('https://jsonplaceholder.typicode.com/posts')
-        store.dispatch('setPosts', data)
     },
     head: {
         title: 'List of Posts'
